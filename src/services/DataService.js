@@ -30,7 +30,7 @@ function getData() {
     return new Promise((resolve, reject)=> {
         resolve(data.map(item => ({...item, type: +item.type, doc_num: +item.doc_num, id: id++})))
     })
-
+    
 
 }
 
