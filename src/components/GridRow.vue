@@ -57,6 +57,8 @@ export default {
       (this.editMode = true), (this.editText = this.item.topic_name);
     },
     onSave() {
+      this.editMode = false
+      this.$emit('save-item', {...this.item, topic_name: this.editText})
 
     }
   },

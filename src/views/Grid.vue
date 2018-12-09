@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <GridRow v-for="item in gridItems" :key="item.topic_name" :item="item"></GridRow>
+        <GridRow @save-item="saveItem" v-for="item in gridItems" :key="item.topic_name" :item="item"></GridRow>
         <!-- <tr
           v-for="(item, index) in gridItems"
           :key="index"
@@ -62,7 +62,11 @@ export default {
   methods: {
     onAlert() {
       alert("alerted");
-    }
+    },
+    saveItem(ev) {
+      console.log(ev)
+
+    },
   },
   components: {
     ActionButton,
